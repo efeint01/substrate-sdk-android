@@ -12,11 +12,6 @@
 apply plugin: 'maven-publish'
 apply plugin: 'signing'
 
-plugins {
-    id 'com.android.library'
-    id 'maven-publish'
-}
-
 task androidJavadocs(type: Javadoc) {
     source = android.sourceSets.main.java.srcDirs
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
