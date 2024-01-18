@@ -11,8 +11,11 @@
 
 apply plugin: 'maven-publish'
 apply plugin: 'signing'
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
+
+plugins {
+    id 'com.android.library'
+    id 'maven-publish'
+}
 
 task androidJavadocs(type: Javadoc) {
     source = android.sourceSets.main.java.srcDirs
